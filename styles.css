@@ -35,11 +35,14 @@ body{
     margin-left:35px;
     /*transition:3s;*/
 }
+.navbar {
+    text-align: center; 
+}
 .navbar a:hover{
-    color:#0ef;
+    color:black;
 }
 .home{
-   position:relative;
+   position:fixed;
    width:100%;
    justify-content: space-between;
    height:100vh;
@@ -50,23 +53,34 @@ body{
    align-items:center;
    padding:70px 10% 0;
 }
-/* Add this CSS to style the content container and its children */
 .content-container {
     display: flex;
     align-items: center;
 }
-
+.home-content{
+    max-width: 600px;
+}
 .text-content {
-    flex: 1; /* Allows text content to take remaining space */
-    margin-right: 20px; /* Adjust margin between text and image */
+    flex: 1; 
+    margin-right: 20px;
+    max-width: 400px;
+    white-space: nowrap; 
+    text-overflow: ellipsis; 
 }
 
 #profile {
-    margin-left: 300px;
     height: 340px;
     width: 350px;
     border: 3px solid rgb(129, 4, 85);
     border-radius: 50%;
+    margin-left: 500px;
+    filter: grayscale(0%);
+    box-shadow: 0px 0px 100px rgb(199, 7, 131); 
+    transition: filter 0.3s ease;
+}
+#profile:hover {
+    filter: brightness(100%); 
+    box-shadow: 0px 0px 100px rgb(129, 4, 85); 
 }
 .home-content h3{
     font-size: 32px;
@@ -80,4 +94,39 @@ body{
 }
 .home-content p{
     font-size: 20px;
-}   
+} 
+.home-sci a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height:40px;
+    background: transparent;
+    border: 2px solid #0ef;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #0ef;
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+} 
+.home-sci a:hover{
+    background: #0ef;
+    color: #081b29;
+    box-shadow: 0 0 20px #0ef;   
+}
+.btn-box{
+    display: inline-block;
+    padding: 12px 28px;
+    background: #0ef;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #081b29;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+}
+.btn-box:hover{
+    box-shadow: 0 0 5px cyan,
+    0 0 25px cyan, 0 0 50px cyan,
+    0 0 100px cyan, 0 0 200px cyan
+}
